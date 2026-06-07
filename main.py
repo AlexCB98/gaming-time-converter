@@ -27,7 +27,11 @@ result.grid(column=1, row=2, padx=5)
 days_text = Label(text='Day/s', font= FONT)
 days_text.grid(column=2, row=2, padx=5)
 
+def converter():
+    result['text'] = round((float(choose.get()) / 24), 2)
 
+button = Button(text='Convert', command=converter)
+button.grid(column=1, row=3)
 
 
 
